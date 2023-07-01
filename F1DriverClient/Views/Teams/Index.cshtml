@@ -1,0 +1,12 @@
+@{
+    ViewData["Name"] = "Teams";
+}
+
+<h1>All F1 Teams:</h1>
+
+<ol>
+@foreach (Team team in Model)
+{
+  <li><strong>@team.TeamName</strong> | <a href="/Teams/Details/@(team.TeamId)">View Details</a></li>
+}
+</ol>
