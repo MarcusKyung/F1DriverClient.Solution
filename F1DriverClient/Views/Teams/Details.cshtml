@@ -7,4 +7,5 @@
 <p>Team Nationality: @Model.TeamNationality</p>
 <p>Team Principal @Model.TeamPrincipal</p>
 
-@Html.ActionLink("Return to all teams", "Index")
+<p>@Html.ActionLink("Edit Details", "Edit", new { id = @Model.TeamId})</p>
+<p>@Html.ActionLink("Return to all teams", "Index")</p>

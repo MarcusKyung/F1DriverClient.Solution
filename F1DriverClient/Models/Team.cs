@@ -35,5 +35,17 @@ namespace F1DriverClient.Models
 
       return team;
     }
+    
+    public static void Post (Team team)
+    {
+      string jsonTeam = JsonConvert.SerializeObject(team);
+      ApiHelper.Post(jsonTeam);
+    }
+
+    public static void Put (Team team)
+    {
+      string jsonTeam = JsonConvert.SerializeObject(team);
+      ApiHelper.Put(team.TeamId, jsonTeam);
+    }
   }
 }

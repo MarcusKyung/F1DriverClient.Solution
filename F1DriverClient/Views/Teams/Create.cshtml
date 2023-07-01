@@ -1,0 +1,30 @@
+@{
+  ViewData["Title"] = "Create Team";
+}
+
+@model F1DriverClient.Models.Team
+
+<h4>Create a new Team:</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.TeamName)
+  @Html.TextBoxFor(model => model.TeamName)
+  <br>
+  @Html.LabelFor(model => model.TeamNationality)
+  @Html.TextBoxFor(model => model.TeamNationality)
+  <br>
+  @Html.LabelFor(model => model.TeamPrincipal)
+  @Html.TextBoxFor(model => model.TeamPrincipal)
+  <br>
+  @Html.LabelFor(model => model.TeamBase)
+  @Html.TextBoxFor(model => model.TeamBase)
+  <br>
+  @Html.LabelFor(model => model.TeamChampionships)
+  @Html.TextBoxFor(model => model.TeamChampionships)
+  <br>
+  <input type="submit" value="Add new Team" class="btn btn-primary"/>
+}
+
+<br>
+<p>@Html.ActionLink("Back to all animals", "Index")</p>
