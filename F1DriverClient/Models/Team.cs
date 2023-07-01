@@ -24,5 +24,16 @@ namespace F1DriverClient.Models
 
       return teamList;
     }
+
+    public static Team GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      Team team = JsonConvert.DeserializeObject<Team>(jsonResponse.ToString());
+
+      return team;
+    }
   }
 }

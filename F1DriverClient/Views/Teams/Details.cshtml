@@ -1,0 +1,10 @@
+@{
+  ViewData["Title"] = $"Details for {Model.TeamName}";
+}
+
+<h1>All About @Model.TeamName</h1>
+
+<p>Team Nationality: @Model.TeamNationality</p>
+<p>Team Principal @Model.TeamPrincipal</p>
+
+@Html.ActionLink("Return to all teams", "Index")
